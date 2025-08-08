@@ -1,100 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sai Manish - Cybersecurity Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <div class="container">
-      <h1>SAI MANISH</h1>
-      <h2>Information Security Specialist | Threat Hunter | Detection Engineer</h2>
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sai Manish — Portfolio</title>
+    <meta name="description" content="Security. Stories. Systems. Portfolio & blog of Sai Manish." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root { --radius: 24px; }
+      html, body { scroll-behavior:smooth; }
+      body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+      .glass { backdrop-filter: blur(12px); background: rgba(255,255,255,0.6); }
+      .dark .glass { background: rgba(0,0,0,0.4); }
+      .grad-text { background: linear-gradient(90deg, #111827, #6b7280); -webkit-background-clip: text; background-clip: text; color: transparent; }
+      @media (prefers-color-scheme: dark) {
+        .grad-text { background: linear-gradient(90deg, #e5e7eb, #a1a1aa); }
+      }
+      .reveal { opacity: 0; transform: translateY(16px); transition: all .7s ease; }
+      .reveal.in { opacity: 1; transform: translateY(0); }
+      .sticky-panel { height: 120vh; }
+      .card { border-radius: var(--radius); }
+    </style>
+  </head>
+  <body class="bg-white text-gray-900 dark:bg-black dark:text-gray-100">
+    <!-- Header -->
+    <header class="fixed top-0 inset-x-0 z-50">
+      <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3 mt-2 rounded-2xl glass border border-white/30 dark:border-white/10">
+        <div class="flex items-center justify-between">
+          <a href="#" class="font-semibold tracking-tight text-lg">Mandy<span class="opacity-50">.in</span></a>
+          <div class="hidden md:flex items-center gap-6 text-sm">
+            <a href="#projects" class="hover:opacity-70">Projects</a>
+            <a href="#blog" class="hover:opacity-70">Blog</a>
+            <a href="#contact" class="hover:opacity-70">Contact</a>
+          </div>
+        </div>
       </nav>
-    </div>
-  </header>
+    </header>
 
-  <section id="about">
-    <div class="container">
-      <h2>Objective</h2>
-      <p>Experienced Cybersecurity Analyst with over 3.5 years specializing in threat detection, incident response, penetration testing, and vulnerability management. Adept in utilizing advanced security tools including SIEM (Microsoft Sentinel, Elastic), XDR platforms (Microsoft Defender, CrowdStrike), and malware analysis tools. Proven track record in enhancing security postures, conducting effective security training, managing security awareness campaigns, and simulated phishing exercises.</p>
-    </div>
-  </section>
+    <!-- Hero -->
+    <section class="relative pt-32 md:pt-40 pb-16">
+      <div class="absolute inset-0 -z-10 overflow-hidden">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="h-64 md:h-80 rounded-[40px] blur-2xl opacity-40 dark:opacity-30"
+               style="background: radial-gradient(1200px 400px at 50% 10%, #93c5fd33, transparent 60%),
+                              radial-gradient(1200px 400px at 50% 10%, #a78bfa33, transparent 60%);">
+          </div>
+        </div>
+      </div>
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-xs uppercase tracking-[0.25em] opacity-60">Information Security • Stories • Systems</p>
+        <h1 class="mt-4 text-5xl md:text-7xl font-extrabold leading-tight grad-text">Security. Stories. Systems.</h1>
+        <p class="mt-6 text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          I lead incident response, build KQL detections, and write clear guides.
+          Here’s a fast, clean portfolio with an Apple-like vibe—minimal, bold, and smooth.
+        </p>
+        <div class="mt-8 flex gap-4 justify-center">
+          <a href="#projects" class="px-5 py-3 rounded-full bg-gray-900 text-white dark:bg-white dark:text-black font-medium hover:opacity-90">View Projects</a>
+          <a href="#contact" class="px-5 py-3 rounded-full border border-gray-300 dark:border-white/20 font-medium hover:bg-gray-50/80 dark:hover:bg-white/5">Contact</a>
+        </div>
+        <div class="mt-12">
+          <div class="rounded-[32px] border border-gray-200 dark:border-white/10 overflow-hidden shadow-xl">
+            <div class="aspect-[16/9] bg-gradient-to-br from-gray-100 to-gray-50 dark:from-zinc-900 dark:to-black flex items-center justify-center">
+              <div class="text-center">
+                <div class="text-sm uppercase tracking-widest opacity-50">Featured</div>
+                <div class="text-2xl md:text-3xl font-semibold mt-2">Threat Hunting Dashboard</div>
+                <p class="mt-2 text-gray-600 dark:text-gray-400">KQL + Sentinel + Automation</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <section id="experience">
-    <div class="container">
-      <h2>Professional Experience</h2>
-      <div class="job">
-        <h3>Information Security Analyst, Resillion</h3>
-        <p><em>June 2024 – Present</em></p>
-        <ul>
-          <li>Managed proactive threat detection and continuous monitoring: Utilizing advanced SIEM tools (Sentinel, ELK) to swiftly identify, analyse, and mitigate potential security threats across diverse client environments.</li>
-          <li>Led triage, forensic analysis, and incident response: Coordinated cross-functional teams, employed forensic tools (Any.Run), and maintained transparent, timely communication with stakeholders to effectively manage Priority-1 security incidents.</li>
-          <li>Conducted comprehensive vulnerability assessments and penetration testing using Nessus, Burp Suite, and Metasploit.</li>
-        </ul>
+    <!-- Sticky product-style panels -->
+    <section aria-label="Highlights" class="relative">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="space-y-24">
+          <div class="sticky-panel">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+              <div class="reveal">
+                <h2 class="text-3xl md:text-5xl font-bold">Fast by default</h2>
+                <p class="mt-4 text-gray-600 dark:text-gray-300">Static hosting on GitHub Pages. Lightweight JS. Optimized images. Core Web Vitals friendly.</p>
+              </div>
+              <div class="reveal">
+                <div class="card border border-gray-200 dark:border-white/10 p-8">
+                  <div class="aspect-video rounded-xl bg-gradient-to-br from-indigo-100 to-blue-50 dark:from-indigo-900/30 dark:to-blue-900/20"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sticky-panel">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+              <div class="order-2 md:order-1 reveal">
+                <div class="card border border-gray-200 dark:border-white/10 p-8">
+                  <div class="aspect-video rounded-xl bg-gradient-to-br from-fuchsia-100 to-violet-50 dark:from-fuchsia-900/30 dark:to-violet-900/20"></div>
+                </div>
+              </div>
+              <div class="order-1 md:order-2 reveal">
+                <h2 class="text-3xl md:text-5xl font-bold">Minimal UI</h2>
+                <p class="mt-4 text-gray-600 dark:text-gray-300">Whitespace, crisp type, gentle motion. Inter font instead of Apple’s SF.</p>
+              </div>
+            </div>
+          </div>
+          <div class="sticky-panel">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+              <div class="reveal">
+                <h2 class="text-3xl md:text-5xl font-bold">Built for your work</h2>
+                <p class="mt-4 text-gray-600 dark:text-gray-300">Highlight security projects, blog posts, and long-form breakdowns with clear sections and CTAs.</p>
+              </div>
+              <div class="reveal">
+                <div class="card border border-gray-200 dark:border-white/10 p-8">
+                  <div class="aspect-video rounded-xl bg-gradient-to-br from-emerald-100 to-teal-50 dark:from-emerald-900/30 dark:to-teal-900/20"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="job">
-        <h3>SOC Analyst L2, Atech</h3>
-        <p><em>Dec 2022 – Feb 2024</em></p>
-        <ul>
-          <li>Promoted from Level 1 to Level 2 within a year due to excellent skills and leadership.</li>
-          <li>Handled daily cybersecurity incidents using Microsoft Sentinel and Microsoft Defender for Endpoint.</li>
-          <li>Used advanced forensic tools and KQL queries to quickly detect and respond to cyber threats.</li>
-        </ul>
-      </div>
-       <div class="job">
-        <h3>SOC Analyst L1, Atech</h3>
-        <p><em>Nov 2021 – Dec 2022</em></p>
-        <ul>
-          <li>Focused on sorting through incidents using Microsoft Sentinel, particularly looking at email security and endpoint protection.</li>
-          <li>Managed email security using Microsoft Defender for Office 365.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="skills">
-    <div class="container">
-      <h2>Key Skills & Tools</h2>
-      <div class="skill-category">
-        <h3>SIEM & XDR</h3>
-        <p>Microsoft Sentinel, ELK Stack, Microsoft Defender for Endpoint, CrowdStrike Falcon</p>
+    <!-- Projects -->
+    <section id="projects" class="py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal text-center">
+          <h2 class="text-4xl md:text-5xl font-bold">Projects</h2>
+          <p class="mt-3 text-gray-600 dark:text-gray-300">A few things I shipped.</p>
+        </div>
+        <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Card -->
+          <a class="reveal block group border border-gray-200 dark:border-white/10 rounded-3xl p-5 hover:shadow-xl transition-shadow" href="#" target="_blank" rel="noopener">
+            <div class="aspect-video rounded-2xl bg-gradient-to-br from-gray-100 to-gray-50 dark:from-zinc-900 dark:to-black"></div>
+            <div class="mt-4">
+              <div class="flex items-center justify-between">
+                <h3 class="font-semibold text-lg">Azure AFD Phishing Detector</h3>
+                <span class="text-xs opacity-60 group-hover:opacity-100">KQL</span>
+              </div>
+              <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Analytical rule to catch phishing via Azure Front Door.</p>
+            </div>
+          </a>
+          <a class="reveal block group border border-gray-200 dark:border-white/10 rounded-3xl p-5 hover:shadow-xl transition-shadow" href="#" target="_blank" rel="noopener">
+            <div class="aspect-video rounded-2xl bg-gradient-to-br from-gray-100 to-gray-50 dark:from-zinc-900 dark:to-black"></div>
+            <div class="mt-4">
+              <div class="flex items-center justify-between">
+                <h3 class="font-semibold text-lg">Threat Intel Digest (n8n)</h3>
+                <span class="text-xs opacity-60 group-hover:opacity-100">Automation</span>
+              </div>
+              <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Pulls RSS and emails a daily summary.</p>
+            </div>
+          </a>
+          <a class="reveal block group border border-gray-200 dark:border-white/10 rounded-3xl p-5 hover:shadow-xl transition-shadow" href="#" target="_blank" rel="noopener">
+            <div class="aspect-video rounded-2xl bg-gradient-to-br from-gray-100 to-gray-50 dark:from-zinc-900 dark:to-black"></div>
+            <div class="mt-4">
+              <div class="flex items-center justify-between">
+                <h3 class="font-semibold text-lg">SOC Runbooks</h3>
+                <span class="text-xs opacity-60 group-hover:opacity-100">Docs</span>
+              </div>
+              <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Clear playbooks for analysts to follow.</p>
+            </div>
+          </a>
+        </div>
       </div>
-      <div class="skill-category">
-        <h3>Malware Analysis & Forensics</h3>
-        <p>IDA Pro, Ghidra, ProcMon, ANY.RUN, PEStudio, Wireshark, Autopsy</p>
-      </div>
-      <div class="skill-category">
-        <h3>Vulnerability Management</h3>
-        <p>Nessus, Qualys, Burp Suite, Metasploit, Nmap</p>
-      </div>
-       <div class="skill-category">
-        <h3>Scripting & Querying</h3>
-        <p>KQL, PowerShell, Bash, Python</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contact">
-    <div class="container">
-      <h2>Contact & Links</h2>
-      <p>📧 <a href="mailto:saimanish041998@gmail.com">saimanish041998@gmail.com</a></p>
-      <p>🔗 <a href="https://linkedin.com/in/sai-m-721384221" target="_blank">LinkedIn</a> | <a href="https://github.com/Manish041998" target="_blank">GitHub</a> | <a href="https://medium.com/@saimanish041998" target="_blank">Medium</a></p>
-    </div>
-  </section>
+    <!-- Blog placeholder -->
+    <section id="blog" class="py-24 bg-gray-50 dark:bg-zinc-950">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal text-center">
+          <h2 class="text-4xl md:text-5xl font-bold">Blog</h2>
+          <p class="mt-3 text-gray-600 dark:text-gray-300">Write posts in Markdown later (Astro-ready). For now, link to Medium.</p>
+        </div>
+        <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <a class="reveal block group border border-gray-200 dark:border-white/10 rounded-3xl p-5 hover:shadow-lg transition-shadow" href="https://medium.com/@saimanish041998" target="_blank" rel="noopener">
+            <div class="aspect-[3/2] rounded-2xl bg-gradient-to-br from-gray-100 to-gray-50 dark:from-zinc-900 dark:to-black"></div>
+            <div class="mt-4">
+              <h3 class="font-semibold">Read on Medium →</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">I’ll migrate posts to my own blog soon.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
 
-  <footer>
-    <div class="container">
-      <p>© 2025 Sai Manish</p>
-    </div>
-  </footer>
-</body>
+    <!-- Contact -->
+    <section id="contact" class="py-24">
+      <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8 text-center">
+        <div class="reveal">
+          <h2 class="text-4xl md:text-5xl font-bold">Let’s work</h2>
+          <p class="mt-3 text-gray-600 dark:text-gray-300">Email: <a class="underline hover:opacity-80" href="mailto:saimanish041998@gmail.com">saimanish041998@gmail.com</a></p>
+          <div class="mt-6 flex items-center justify-center gap-4">
+            <a class="px-4 py-2 rounded-full border border-gray-300 dark:border-white/20 hover:bg-gray-50/80 dark:hover:bg-white/5" href="https://www.linkedin.com/in/sai-m-721384221" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="px-4 py-2 rounded-full border border-gray-300 dark:border-white/20 hover:bg-gray-50/80 dark:hover:bg-white/5" href="https://github.com/Manish041998" target="_blank" rel="noopener">GitHub</a>
+            <a class="px-4 py-2 rounded-full border border-gray-300 dark:border-white/20 hover:bg-gray-50/80 dark:hover:bg-white/5" href="https://getsmandy.in" target="_blank" rel="noopener">getsmandy.in</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-10 border-t border-gray-200 dark:border-white/10">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-sm flex flex-col md:flex-row items-center justify-between gap-3">
+        <div class="opacity-60">© <span id="year"></span> Sai Manish</div>
+        <div class="opacity-60">Built on GitHub Pages</div>
+      </div>
+    </footer>
+
+    <script>
+      // Year
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Reveal on scroll
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) e.target.classList.add('in');
+        });
+      }, { threshold: 0.18 });
+      document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    </script>
+  </body>
 </html>
