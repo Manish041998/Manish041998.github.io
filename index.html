@@ -4,10 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sai Manish — Cybersecurity Analyst</title>
-    <meta name="description" content="Cybersecurity Analyst | Information Security Specialist | Threat Hunter — Portfolio & resume of Sai Manish." />
+    <meta name="description" content="Cybersecurity Analyst | Information Security Specialist | Threat Hunter — Portfolio, case studies, and résumé of Sai Manish." />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <meta property="og:title" content="Sai Manish — Cybersecurity Analyst" />
+    <meta property="og:description" content="Threat Detection & Response, KQL, Incident Handling, and Security Automation." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://getsmandy.in" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       :root { --radius: 24px; }
@@ -22,7 +26,29 @@
       .card { border-radius: var(--radius); }
       .badge { border: 1px solid rgb(229 231 235/1); }
       @media (prefers-color-scheme: dark){ .badge{ border-color: rgba(255,255,255,.12);} }
+      .muted { color: rgb(107 114 128 / 1); }
+      .kpi { border: 1px dashed rgba(148,163,184,.4); }
+      .section-title { @apply text-3xl md:text-4xl font-bold; }
+      .mono { font-variant-numeric: tabular-nums; }
     </style>
+
+    <!-- JSON-LD for basic SEO -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"Person",
+      "name":"Sai Manish",
+      "jobTitle":"Cybersecurity Analyst",
+      "url":"https://getsmandy.in",
+      "email":"mailto:saimanish041998@gmail.com",
+      "sameAs":[
+        "https://www.linkedin.com/in/sai-m-721384221",
+        "https://github.com/Manish041998",
+        "https://medium.com/@saimanish041998"
+      ],
+      "knowsAbout":["KQL","Microsoft Sentinel","Defender","Threat Hunting","Incident Response","Vulnerability Assessment","Malware Analysis"]
+    }
+    </script>
   </head>
   <body class="bg-white text-gray-900 dark:bg-black dark:text-gray-100">
     <!-- Header -->
@@ -32,8 +58,11 @@
           <a href="#" class="font-semibold tracking-tight text-lg">Mandy<span class="opacity-50">.in</span></a>
           <div class="hidden md:flex items-center gap-6 text-sm">
             <a href="#summary" class="hover:opacity-70">Summary</a>
+            <a href="#services" class="hover:opacity-70">Services</a>
             <a href="#skills" class="hover:opacity-70">Skills</a>
             <a href="#experience" class="hover:opacity-70">Experience</a>
+            <a href="#cases" class="hover:opacity-70">Case Studies</a>
+            <a href="#achievements" class="hover:opacity-70">Achievements</a>
             <a href="#projects" class="hover:opacity-70">Projects</a>
             <a href="#blog" class="hover:opacity-70">Blog</a>
             <a href="#contact" class="hover:opacity-70">Contact</a>
@@ -53,12 +82,12 @@
         </div>
       </div>
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-        <p class="text-xs uppercase tracking-[0.25em] opacity-60">Portfolio • Resume • Writing</p>
+        <p class="text-xs uppercase tracking-[0.25em] opacity-60">Portfolio • Case Studies • Resume</p>
         <h1 class="mt-4 text-4xl md:text-6xl font-extrabold leading-tight grad-text">
-          Cybersecurity Analyst | Information Security Specialist | Threat Hunter
+          Cybersecurity Analyst · Information Security Specialist · Threat Hunter
         </h1>
         <p class="mt-6 text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-          📍 Bangalore, India <span class="opacity-60">•</span> Open to Relocation: Canada / USA
+          Bangalore, India <span class="opacity-60">•</span> Open to Relocation: Canada / USA
         </p>
         <div class="mt-6 flex flex-wrap gap-3 justify-center">
           <a class="badge px-3 py-1 rounded-full text-sm hover:bg-gray-50/70 dark:hover:bg-white/5" href="mailto:saimanish041998@gmail.com">saimanish041998@gmail.com</a>
@@ -67,7 +96,7 @@
           <a class="badge px-3 py-1 rounded-full text-sm hover:bg-gray-50/70 dark:hover:bg-white/5" href="https://medium.com/@saimanish041998" target="_blank" rel="noopener">Medium</a>
         </div>
         <div class="mt-8 flex gap-4 justify-center">
-          <a href="#experience" class="px-5 py-3 rounded-full bg-gray-900 text-white dark:bg-white dark:text-black font-medium hover:opacity-90">View Experience</a>
+          <a href="#cases" class="px-5 py-3 rounded-full bg-gray-900 text-white dark:bg-white dark:text-black font-medium hover:opacity-90">View Case Studies</a>
           <a href="#contact" class="px-5 py-3 rounded-full border border-gray-300 dark:border-white/20 font-medium hover:bg-gray-50/80 dark:hover:bg-white/5">Contact</a>
         </div>
       </div>
@@ -77,43 +106,353 @@
     <section id="summary" class="py-16">
       <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <div class="reveal">
-          <h2 class="text-3xl md:text-4xl font-bold">Professional Summary</h2>
+          <h2 class="section-title">Professional Summary</h2>
           <p class="mt-4 text-gray-700 dark:text-gray-300 leading-relaxed">
-            Cybersecurity professional with <strong>4+ years</strong> of progressive experience specializing in Information Security, Threat Detection &amp; Response, Vulnerability Assessments, and External Penetration Testing.
-            Adept with Microsoft Sentinel/Defender, CrowdStrike, ELK, Qualys, and Nessus; skilled in <strong>Python, Bash, PowerShell, and KQL</strong>.
-            Proven track record of reducing incident response time by <strong>~30%</strong>, enhancing detection accuracy, and managing security awareness training and simulated phishing campaigns.
+            Cybersecurity professional with <strong>4+ years</strong> of experience in Information Security, Threat Detection &amp; Response, Vulnerability Assessments, and External Penetration Testing.
+            Skilled with Microsoft Sentinel/Defender, CrowdStrike, ELK, Qualys, and Nessus; proficient in <strong>KQL, PowerShell, Bash, and Python</strong>.
+            Proven to reduce incident response time by <strong>~30%</strong>, improve detection accuracy, and run effective security awareness and phishing simulation programs.
           </p>
         </div>
       </div>
     </section>
 
+    <!-- Services -->
+    <section id="services" class="py-16 bg-gray-50 dark:bg-zinc-950">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal text-center">
+          <h2 class="section-title">What I Do</h2>
+          <p class="mt-3 muted">Consulting & hands-on delivery for security teams.</p>
+        </div>
+        <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="reveal card border border-gray-200 dark:border-white/10 p-6">
+            <h3 class="font-semibold text-lg">Threat Detection Engineering</h3>
+            <p class="mt-2 text-sm muted">KQL analytics, rule tuning, data onboarding, coverage mapping to MITRE ATT&amp;CK.</p>
+          </div>
+          <div class="reveal card border border-gray-200 dark:border-white/10 p-6">
+            <h3 class="font-semibold text-lg">Incident Response</h3>
+            <p class="mt-2 text-sm muted">P1 triage, containment guidance, root-cause timelines, stakeholder comms.</p>
+          </div>
+          <div class="reveal card border border-gray-200 dark:border-white/10 p-6">
+            <h3 class="font-semibold text-lg">Threat Hunting</h3>
+            <p class="mt-2 text-sm muted">Hypothesis-driven hunts using Sentinel, Defender, ELK; IOC/IOA development.</p>
+          </div>
+          <div class="reveal card border border-gray-200 dark:border-white/10 p-6">
+            <h3 class="font-semibold text-lg">VA/PT & Hardening</h3>
+            <p class="mt-2 text-sm muted">Qualys/Nessus scans, external attack surface checks, prioritized remediation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Skills -->
-    <section id="skills" class="py-16 bg-gray-50 dark:bg-zinc-950">
+    <section id="skills" class="py-16">
       <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div class="reveal text-center">
-          <h2 class="text-3xl md:text-4xl font-bold">Key Competencies</h2>
+          <h2 class="section-title">Skills & Tools</h2>
         </div>
+
         <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          <div class="reveal card border border-gray-200 dark:border-white/10 p-5">Information Security Operations</div>
-          <div class="reveal card border border-gray-200 dark:border-white/10 p-5">Threat Detection Engineering &amp; Hunting</div>
-          <div class="reveal card border border-gray-200 dark:border-white/10 p-5">Incident Response (P1 Incidents)</div>
-          <div class="reveal card border border-gray-200 dark:border-white/10 p-5">Vulnerability Assessments &amp; Pen Testing</div>
-          <div class="reveal card border border-gray-200 dark:border-white/10 p-5">Security Automation (Logic Apps)</div>
-          <div class="reveal card border border-gray-200 dark:border-white/10 p-5">Malware Analysis (Static &amp; Dynamic)</div>
-          <div class="reveal card border border-gray-200 dark:border-white/10 p-5">Security Awareness &amp; Phishing Campaigns</div>
-          <div class="reveal card border border-gray-200 dark:border-white/10 p-5">Security Leadership &amp; Team Management</div>
+          <div class="reveal card border border-gray-200 dark:border-white/10 p-5">Microsoft Sentinel, ELK</div>
+          <div class="reveal card border border-gray-200 dark:border-white/10 p-5">Microsoft Defender, CrowdStrike Falcon</div>
+          <div class="reveal card border border-gray-200 dark:border-white/10 p-5">Zeek, Wireshark</div>
+          <div class="reveal card border border-gray-200 dark:border-white/10 p-5">Qualys, Nessus, Nmap</div>
+          <div class="reveal card border border-gray-200 dark:border-white/10 p-5">Ghidra, FLARE VM, ProcMon, ANY.RUN</div>
+          <div class="reveal card border border-gray-200 dark:border-white/10 p-5">Azure, Docker, VMware/VirtualBox</div>
+          <div class="reveal card border border-gray-200 dark:border-white/10 p-5">KQL, PowerShell, Bash, Python</div>
+          <div class="reveal card border border-gray-200 dark:border-white/10 p-5">Windows, Linux, macOS</div>
         </div>
 
         <div class="reveal mt-12">
-          <h3 class="text-2xl font-semibold">Technical Skills</h3>
-          <div class="mt-4 overflow-x-auto">
-            <table class="min-w-full text-sm">
-              <tbody class="align-top">
-                <tr class="border-t border-gray-200 dark:border-white/10">
-                  <td class="py-3 pr-6 font-medium">SIEM &amp; Log Management</td>
-                  <td class="py-3">Microsoft Sentinel, ELK Stack</td>
-                </tr>
-                <tr class="border-t border-gray-200 dark:border-white/10">
-                  <td class="py-3 pr-6 font-medium">XDR/EDR</td>
-                  <td class="py-3">Microsoft Defender, CrowdStrike Falcon</td>
-                </tr>
+          <h3 class="text-2xl font-semibold">Certifications</h3>
+          <ul class="mt-4 grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            <li class="card border border-gray-200 dark:border-white/10 p-4"><strong>SC-100</strong> — Microsoft Cybersecurity Architect (2025)</li>
+            <li class="card border border-gray-200 dark:border-white/10 p-4"><strong>SC-200</strong> — Microsoft Security Operations Analyst (2023)</li>
+            <li class="card border border-gray-200 dark:border-white/10 p-4"><strong>AZ-500</strong> — Microsoft Azure Security Engineer Associate (2023)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="py-16 bg-gray-50 dark:bg-zinc-950">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal text-center">
+          <h2 class="section-title">Professional Experience</h2>
+        </div>
+
+        <!-- Resillion -->
+        <div class="reveal mt-10 card border border-gray-200 dark:border-white/10 p-6">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+            <h3 class="text-xl font-semibold">Information Security Analyst — Resillion</h3>
+            <div class="text-sm opacity-70">Jun 2024 – Present · Remote</div>
+          </div>
+          <ul class="mt-3 list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+            <li>Owned detection & monitoring across client environments; proactive identification and containment guidance.</li>
+            <li>Performed triage and deep analysis of <strong>Priority-1</strong> incidents, improving MTTR by ~30%.</li>
+            <li>Led monthly <strong>MDR</strong> calls and delivered executive-ready posture & trends reports.</li>
+            <li>Executed external <strong>VA/PT</strong> with prioritized remediation plans.</li>
+            <li>Ran <strong>security awareness & simulated phishing</strong> programs; improved reporting behavior.</li>
+            <li>Coordinated team schedules, trained analysts, and enforced QA on incident handling & documentation.</li>
+          </ul>
+        </div>
+
+        <!-- Atech Senior -->
+        <div class="reveal mt-6 card border border-gray-200 dark:border-white/10 p-6">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+            <h3 class="text-xl font-semibold">Senior Security Analyst — Atech Cloud</h3>
+            <div class="text-sm opacity-70">Dec 2022 – Mar 2024 · Remote</div>
+          </div>
+          <ul class="mt-3 list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+            <li>Built & tuned <strong>KQL detections</strong> in Sentinel; reduced false positives and accelerated triage.</li>
+            <li>Authored <strong>IR playbooks/runbooks</strong> standardizing response & evidence collection.</li>
+            <li>Led <strong>threat-hunting</strong> using ELK, ProcMon, and registry/file forensics.</li>
+            <li>Planned and executed phishing simulations; delivered targeted awareness sessions.</li>
+            <li>Delivered internal sessions on KQL, hunting methodology, and IR best practices.</li>
+          </ul>
+        </div>
+
+        <!-- Atech Junior -->
+        <div class="reveal mt-6 card border border-gray-200 dark:border-white/10 p-6">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+            <h3 class="text-xl font-semibold">Junior Security Analyst — Atech Cloud</h3>
+            <div class="text-sm opacity-70">Nov 2021 – Dec 2022 · Remote</div>
+          </div>
+          <ul class="mt-3 list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+            <li>Performed initial alert triage across email/cloud/endpoint using Sentinel and Defender.</li>
+            <li>Hardened Azure configurations for secure remote operations.</li>
+            <li>Investigated & mitigated phishing threats within MDO; improved user reporting workflows.</li>
+            <li>Contributed to daily/weekly alert reviews; documented patterns for rule tuning.</li>
+          </ul>
+        </div>
+
+        <!-- Independent -->
+        <div class="reveal mt-6 card border border-gray-200 dark:border-white/10 p-6">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+            <h3 class="text-xl font-semibold">CTF & Malware Analysis — Independent (HTB / TryHackMe)</h3>
+            <div class="text-sm opacity-70">Mar 2024 – May 2024</div>
+          </div>
+          <ul class="mt-3 list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+            <li>Analyzed malware samples (PE, PDFs, scripts, Office docs) using static & dynamic techniques.</li>
+            <li>Published IOCs and notes to inform hunt queries and detections.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section id="cases" class="py-16">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal text-center">
+          <h2 class="section-title">Case Studies</h2>
+          <p class="mt-3 muted">Deep dives into how I solve security problems.</p>
+        </div>
+
+        <div class="mt-10 grid md:grid-cols-2 gap-6">
+          <!-- AFD Phishing -->
+          <article class="reveal card border border-gray-200 dark:border-white/10 p-6">
+            <h3 class="text-xl font-semibold">Detecting Azure Front Door AiTM Phishing</h3>
+            <p class="mt-2 muted">Built a Sentinel analytic rule to flag suspicious AFD patterns used in adversary-in-the-middle phishing.</p>
+            <details class="mt-3">
+              <summary class="cursor-pointer text-sm underline">Read more</summary>
+              <ul class="list-disc pl-5 mt-3 space-y-2 text-gray-700 dark:text-gray-300">
+                <li><strong>Signals:</strong> unusual hostnames, redirect chains, inconsistent user agents, anomalous referrers.</li>
+                <li><strong>Data sources:</strong> Defender for Office 365, Azure Firewall/Proxy logs, SigninLogs.</li>
+                <li><strong>Output:</strong> reduced time-to-detect and guided response playbook with takedown steps.</li>
+              </ul>
+            </details>
+          </article>
+
+          <!-- Impossible Travel / Identity -->
+          <article class="reveal card border border-gray-200 dark:border-white/10 p-6">
+            <h3 class="text-xl font-semibold">Identity Anomalies: “Impossible Travel” Validation</h3>
+            <p class="mt-2 muted">Correlated SigninLogs with audit data to validate impossible travel and weed out benign noise.</p>
+            <details class="mt-3">
+              <summary class="cursor-pointer text-sm underline">Read more</summary>
+              <ul class="list-disc pl-5 mt-3 space-y-2 text-gray-700 dark:text-gray-300">
+                <li><strong>Join logic:</strong> IP-based correlation between PIM/Audit logs and SigninLogs location details.</li>
+                <li><strong>Outcome:</strong> fewer false positives; faster escalations for real compromises.</li>
+              </ul>
+            </details>
+          </article>
+
+          <!-- n8n TI Digest -->
+          <article class="reveal card border border-gray-200 dark:border-white/10 p-6">
+            <h3 class="text-xl font-semibold">Automated Threat Intel Digest (n8n + Email)</h3>
+            <p class="mt-2 muted">Automated RSS aggregation and daily summaries to SOC inbox; improved situational awareness.</p>
+            <details class="mt-3">
+              <summary class="cursor-pointer text-sm underline">Read more</summary>
+              <ul class="list-disc pl-5 mt-3 space-y-2 text-gray-700 dark:text-gray-300">
+                <li><strong>Flow:</strong> RSS → dedupe → summarize → email with links & tags.</li>
+                <li><strong>Benefit:</strong> analysts saved time; better prioritization for hunts.</li>
+              </ul>
+            </details>
+          </article>
+
+          <!-- Runbooks -->
+          <article class="reveal card border border-gray-200 dark:border-white/10 p-6">
+            <h3 class="text-xl font-semibold">SOC Runbooks that Analysts Actually Use</h3>
+            <p class="mt-2 muted">Clear, step-by-step playbooks for common alerts with decision trees and evidence checklists.</p>
+            <details class="mt-3">
+              <summary class="cursor-pointer text-sm underline">Read more</summary>
+              <ul class="list-disc pl-5 mt-3 space-y-2 text-gray-700 dark:text-gray-300">
+                <li><strong>Format:</strong> triage → scope → contain → comms → closure; copy-paste KQL blocks.</li>
+                <li><strong>Effect:</strong> standardized response; easier onboarding; fewer handoff errors.</li>
+              </ul>
+            </details>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements -->
+    <section id="achievements" class="py-16 bg-gray-50 dark:bg-zinc-950">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal text-center">
+          <h2 class="section-title">Selected Achievements</h2>
+          <p class="mt-3 muted">Concrete outcomes from recent work (customize as needed).</p>
+        </div>
+        <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="reveal card kpi p-6 text-center">
+            <div class="text-4xl font-extrabold mono">~30%</div>
+            <div class="mt-1 text-sm muted">faster MTTR on P1 incidents</div>
+          </div>
+          <div class="reveal card kpi p-6 text-center">
+            <div class="text-4xl font-extrabold mono">↓ FP</div>
+            <div class="mt-1 text-sm muted">false positives reduced via KQL tuning</div>
+          </div>
+          <div class="reveal card kpi p-6 text-center">
+            <div class="text-4xl font-extrabold mono">Playbooks</div>
+            <div class="mt-1 text-sm muted">standardized IR across common alerts</div>
+          </div>
+          <div class="reveal card kpi p-6 text-center">
+            <div class="text-4xl font-extrabold mono">Awareness</div>
+            <div class="mt-1 text-sm muted">higher reporting; fewer phishing clicks</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal text-center">
+          <h2 class="section-title">Projects</h2>
+          <p class="mt-3 text-gray-600 dark:text-gray-300">A few things I shipped.</p>
+        </div>
+        <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <a class="reveal block group border border-gray-200 dark:border-white/10 rounded-3xl p-5 hover:shadow-xl transition-shadow" href="#" target="_blank" rel="noopener">
+            <div class="aspect-video rounded-2xl bg-gradient-to-br from-gray-100 to-gray-50 dark:from-zinc-900 dark:to-black"></div>
+            <div class="mt-4">
+              <div class="flex items-center justify-between">
+                <h3 class="font-semibold text-lg">Azure AFD Phishing Detector</h3>
+                <span class="text-xs opacity-60 group-hover:opacity-100">KQL</span>
+              </div>
+              <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Analytical rule to catch AiTM attempts via Azure Front Door.</p>
+            </div>
+          </a>
+          <a class="reveal block group border border-gray-200 dark:border-white/10 rounded-3xl p-5 hover:shadow-xl transition-shadow" href="#" target="_blank" rel="noopener">
+            <div class="aspect-video rounded-2xl bg-gradient-to-br from-gray-100 to-gray-50 dark:from-zinc-900 dark:to-black"></div>
+            <div class="mt-4">
+              <div class="flex items-center justify-between">
+                <h3 class="font-semibold text-lg">Threat Intel Digest (n8n)</h3>
+                <span class="text-xs opacity-60 group-hover:opacity-100">Automation</span>
+              </div>
+              <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">RSS aggregation + daily summary emails.</p>
+            </div>
+          </a>
+          <a class="reveal block group border border-gray-200 dark:border-white/10 rounded-3xl p-5 hover:shadow-xl transition-shadow" href="#" target="_blank" rel="noopener">
+            <div class="aspect-video rounded-2xl bg-gradient-to-br from-gray-100 to-gray-50 dark:from-zinc-900 dark:to-black"></div>
+            <div class="mt-4">
+              <div class="flex items-center justify-between">
+                <h3 class="font-semibold text-lg">SOC Runbooks</h3>
+                <span class="text-xs opacity-60 group-hover:opacity-100">Docs</span>
+              </div>
+              <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Triage → scope → contain → comms → closure.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog -->
+    <section id="blog" class="py-24 bg-gray-50 dark:bg-zinc-950">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal text-center">
+          <h2 class="section-title">Blog</h2>
+          <p class="mt-3 text-gray-600 dark:text-gray-300">Publishing on Medium now — migrating posts here later.</p>
+        </div>
+        <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <a class="reveal block group border border-gray-200 dark:border-white/10 rounded-3xl p-5 hover:shadow-lg transition-shadow" href="https://medium.com/@saimanish041998" target="_blank" rel="noopener">
+            <div class="aspect-[3/2] rounded-2xl bg-gradient-to-br from-gray-100 to-gray-50 dark:from-zinc-900 dark:to-black"></div>
+            <div class="mt-4">
+              <h3 class="font-semibold">Read on Medium →</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">Detections, malware analysis, IR notes.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials (optional placeholder) -->
+    <section id="testimonials" class="py-16">
+      <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal text-center">
+          <h2 class="section-title">Testimonials</h2>
+          <p class="mt-3 muted">Add short quotes from managers/peers (2–3 lines each).</p>
+        </div>
+        <div class="mt-8 grid md:grid-cols-2 gap-6">
+          <blockquote class="reveal card border border-gray-200 dark:border-white/10 p-6">
+            <p>"Clear communicator under pressure; his KQL detections cut noise and surfaced what mattered."</p>
+            <footer class="mt-3 text-sm muted">— SOC Lead, Client (Name on request)</footer>
+          </blockquote>
+          <blockquote class="reveal card border border-gray-200 dark:border-white/10 p-6">
+            <p>"Turned vague alerts into actionable playbooks. New analysts onboarded twice as fast."</p>
+            <footer class="mt-3 text-sm muted">— Security Manager</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-24">
+      <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8 text-center">
+        <div class="reveal">
+          <h2 class="section-title">Let’s work</h2>
+          <p class="mt-3 text-gray-600 dark:text-gray-300">
+            Email: <a class="underline hover:opacity-80" href="mailto:saimanish041998@gmail.com">saimanish041998@gmail.com</a>
+          </p>
+          <div class="mt-6 flex items-center justify-center gap-4">
+            <a class="px-4 py-2 rounded-full border border-gray-300 dark:border-white/20 hover:bg-gray-50/80 dark:hover:bg-white/5" href="https://www.linkedin.com/in/sai-m-721384221" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="px-4 py-2 rounded-full border border-gray-300 dark:border-white/20 hover:bg-gray-50/80 dark:hover:bg-white/5" href="https://github.com/Manish041998" target="_blank" rel="noopener">GitHub</a>
+            <a class="px-4 py-2 rounded-full border border-gray-300 dark:border-white/20 hover:bg-gray-50/80 dark:hover:bg-white/5" href="https://medium.com/@saimanish041998" target="_blank" rel="noopener">Medium</a>
+          </div>
+
+          <!-- Optional: Resume download (place your PDF at /assets/SaiManish_CyberSecurity_Resume.pdf) -->
+          <div class="mt-6">
+            <a class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-gray-900 text-white dark:bg-white dark:text-black font-medium hover:opacity-90" href="/assets/SaiManish_CyberSecurity_Resume.pdf" target="_blank" rel="noopener">
+              Download Resume (PDF)
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-10 border-t border-gray-200 dark:border-white/10">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-sm flex flex-col md:flex-row items-center justify-between gap-3">
+        <div class="opacity-60">© <span id="year"></span> Sai Manish</div>
+        <div class="opacity-60">Built on GitHub Pages</div>
+      </div>
+    </footer>
+
+    <script>
+      // Year
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Reveal on scroll
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+      }, { threshold: 0.18 });
+      document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    </script>
+  </body>
+</html>
