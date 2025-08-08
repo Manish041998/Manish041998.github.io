@@ -1,405 +1,363 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sai Manish — Cybersecurity Analyst</title>
-    <meta name="description" content="Cybersecurity Analyst | Information Security Specialist | Threat Hunter — Portfolio, case studies, and résumé of Sai Manish." />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Sai Manish — Cybersecurity Analyst" />
-    <meta property="og:description" content="Threat Detection & Response, KQL, Incident Handling, and Security Automation." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://getsmandy.in" />
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      :root { --radius: 24px; }
-      html, body { scroll-behavior:smooth; }
-      body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
-      .glass { backdrop-filter: blur(12px); background: rgba(255,255,255,0.6); }
-      .dark .glass { background: rgba(0,0,0,0.4); }
-      .grad-text { background: linear-gradient(90deg, #111827, #6b7280); -webkit-background-clip: text; background-clip: text; color: transparent; }
-      @media (prefers-color-scheme: dark) { .grad-text { background: linear-gradient(90deg, #e5e7eb, #a1a1aa); } }
-      .reveal { opacity: 0; transform: translateY(16px); transition: all .7s ease; }
-      .reveal.in { opacity: 1; transform: translateY(0); }
-      .card { border-radius: var(--radius); }
-      .badge { border: 1px solid rgb(229 231 235/1); }
-      @media (prefers-color-scheme: dark){ .badge{ border-color: rgba(255,255,255,.12);} }
-      .muted { color: rgb(107 114 128 / 1); }
-      .kpi { border: 1px dashed rgba(148,163,184,.4); }
-      .mono { font-variant-numeric: tabular-nums; }
-    </style>
-
-    <!-- JSON-LD for basic SEO -->
-    <script type="application/ld+json">
-    {
-      "@context":"https://schema.org",
-      "@type":"Person",
-      "name":"Sai Manish",
-      "jobTitle":"Cybersecurity Analyst",
-      "url":"https://getsmandy.in",
-      "email":"mailto:saimanish041998@gmail.com",
-      "sameAs":[
-        "https://www.linkedin.com/in/sai-m-721384221",
-        "https://github.com/Manish041998",
-        "https://medium.com/@saimanish041998"
-      ],
-      "knowsAbout":["KQL","Microsoft Sentinel","Defender","Threat Hunting","Incident Response","Vulnerability Assessment","Malware Analysis"]
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mandy | Cybersecurity Portfolio</title>
+  <meta name="description" content="Portfolio of Sai Manish (Mandy) — Cybersecurity Analyst, Threat Hunter, Information Security Lead." />
+  <meta name="color-scheme" content="light dark" />
+  <style>
+    /* ========  Apple-clean, premium aesthetic  ======== */
+    :root{
+      --bg: #ffffff;
+      --text:#0b1220;
+      --muted:#5b667a;
+      --card:#f6f7fb;
+      --line:#e7e9f2;
+      --brand:#0a84ff; /* macOS/iOS-like blue */
+      --brand-ink:#0b4ea2;
+      --accent:#8e8cf1; /* soft purple for subtle glow */
+      --shadow: 0 10px 30px rgba(16,24,40,.07);
+      --radius: 18px;
     }
-    </script>
-  </head>
-  <body class="bg-white text-gray-900 dark:bg-black dark:text-gray-100">
-    <!-- Header -->
-    <header class="fixed top-0 inset-x-0 z-50">
-      <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3 mt-2 rounded-2xl glass border border-white/30 dark:border-white/10">
-        <div class="flex items-center justify-between">
-          <a href="#" class="font-semibold tracking-tight text-lg">Mandy<span class="opacity-50">.in</span></a>
-          <div class="hidden md:flex items-center gap-6 text-sm">
-            <a href="#summary" class="hover:opacity-70">Summary</a>
-            <a href="#skills" class="hover:opacity-70">Skills</a>
-            <a href="#experience" class="hover:opacity-70">Experience</a>
-            <a href="#education" class="hover:opacity-70">Education</a>
-            <a href="#certs" class="hover:opacity-70">Certifications</a>
-            <a href="#projects" class="hover:opacity-70">Projects</a>
-            <a href="#blog" class="hover:opacity-70">Blog</a>
-            <a href="#contact" class="hover:opacity-70">Contact</a>
-          </div>
-        </div>
-      </nav>
-    </header>
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg:#0b0f14; --text:#edf1f7; --muted:#a7b0c0; --card:#121821; --line:#1e2a39; --brand:#4da3ff; --brand-ink:#93c9ff; --accent:#b2b0ff; --shadow: 0 12px 40px rgba(0,0,0,.45)
+      }
+    }
+    [data-theme="dark"]{ /* manual override */
+      --bg:#0b0f14; --text:#edf1f7; --muted:#a7b0c0; --card:#121821; --line:#1e2a39; --brand:#4da3ff; --brand-ink:#93c9ff; --accent:#b2b0ff; --shadow: 0 12px 40px rgba(0,0,0,.45)
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{
+      font-family: ui-sans-serif, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji;
+      background: var(--bg);
+      color: var(--text);
+      line-height:1.6;
+      letter-spacing: .15px;
+      scroll-behavior:smooth;
+    }
+    a{color: var(--brand); text-decoration: none}
+    a:hover{ text-decoration: underline }
+    .container{width:min(1100px, 92%); margin-inline:auto}
+    .grid{display:grid; gap:22px}
+    .btn{
+      display:inline-flex; align-items:center; gap:.55rem;
+      padding:.8rem 1.1rem; border-radius: 999px; border:1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,.6), rgba(255,255,255,0));
+      box-shadow: var(--shadow);
+      color: var(--text); font-weight:600;
+    }
+    .btn.primary{ background: linear-gradient(180deg, var(--brand), var(--brand-ink)); color:white; border:none }
+    .btn.ghost{ background: transparent }
+    .chip{ display:inline-block; padding:.5rem .8rem; border-radius:999px; background:var(--card); border:1px solid var(--line); font-weight:600; font-size:.92rem }
+    .card{ background: var(--card); border:1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow) }
 
-    <!-- Hero -->
-    <section class="relative pt-32 md:pt-40 pb-16">
-      <div class="absolute inset-0 -z-10 overflow-hidden">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div class="h-64 md:h-80 rounded-[40px] blur-2xl opacity-40 dark:opacity-30"
-               style="background: radial-gradient(1200px 400px at 50% 10%, #93c5fd33, transparent 60%),
-                              radial-gradient(1200px 400px at 50% 10%, #a78bfa33, transparent 60%);">
-          </div>
-        </div>
+    /* ========== Top Nav ========== */
+    .nav{ position: sticky; top: 0; z-index: 50; backdrop-filter: saturate(180%) blur(12px);
+      background: color-mix(in srgb, var(--bg) 70%, transparent); border-bottom:1px solid var(--line) }
+    .nav .inner{ display:flex; justify-content:space-between; align-items:center; height:64px }
+    .brand{ display:flex; align-items:center; gap:.6rem; font-weight:800; letter-spacing:.2px }
+    .brand .dot{ width:10px; height:10px; border-radius:50%; background: radial-gradient(circle at 30% 30%, var(--accent), var(--brand)); box-shadow:0 0 30px var(--accent) }
+    .links{ display:flex; gap:18px; align-items:center }
+    .links a{ padding:.45rem .7rem; border-radius:10px }
+    .links a:hover{ background:var(--card) }
+
+    /* ========== Hero ========== */
+    .hero{ padding: 72px 0 36px; }
+    .hero .cols{ grid-template-columns: 1.2fr .8fr; align-items:center }
+    .headline{ font-size: clamp(2rem, 4vw, 3.25rem); line-height:1.15; font-weight:900; letter-spacing:.2px }
+    .sub{ color:var(--muted); font-size:1.1rem; margin-top:.8rem }
+    .cta{ display:flex; gap:12px; margin-top:22px; flex-wrap:wrap }
+    .hero-visual{ position:relative; aspect-ratio: 1/1; border-radius: 24px; overflow:hidden; background: radial-gradient(1200px 500px at -10% -10%, rgba(13,110,253,.18), transparent),
+                                                   radial-gradient(1200px 500px at 110% 110%, rgba(142,140,241,.18), transparent); border:1px solid var(--line) }
+    .hero-visual .orb{ position:absolute; inset:auto auto 10% 10%; width:160px; height:160px; border-radius:50%; background: radial-gradient(circle at 30% 30%, var(--accent), transparent 60%);
+      filter: blur(12px); opacity:.8; animation: float 8s ease-in-out infinite }
+    @keyframes float{ 0%,100%{ transform: translateY(0)} 50%{ transform: translateY(-12px)} }
+
+    /* ========== Sections ========== */
+    section{ padding: 64px 0 }
+    h2{ font-size: clamp(1.4rem, 2.4vw, 2rem); margin:0 0 18px; letter-spacing:.3px }
+    .muted{ color: var(--muted) }
+    .cols-2{ grid-template-columns: repeat(2,1fr) }
+    .cols-3{ grid-template-columns: repeat(3,1fr) }
+    .cols-4{ grid-template-columns: repeat(4,1fr) }
+
+    /* Cards */
+    .proj{ display:flex; flex-direction:column; overflow:hidden }
+    .proj .img{ aspect-ratio: 16/10; background: linear-gradient(145deg, rgba(10,132,255,.10), rgba(142,140,241,.12)); border-bottom:1px solid var(--line) }
+    .proj .body{ padding:16px 16px 18px }
+    .proj h3{ margin:.2rem 0 .3rem; font-size:1.15rem }
+    .proj p{ margin:.2rem 0 .8rem; color:var(--muted) }
+
+    .timeline{ position:relative; padding-left:26px }
+    .timeline::before{ content:""; position:absolute; left:7px; top:0; bottom:0; width:2px; background:var(--line) }
+    .tl{ position:relative; padding:10px 14px 14px; margin: 6px 0 14px; border-radius:14px }
+    .tl::before{ content:""; position:absolute; left:-21px; top:16px; width:10px; height:10px; border-radius:50%; background: var(--brand) }
+
+    /* Reveal on scroll */
+    .reveal{ opacity:0; transform: translateY(14px); transition: .6s ease }
+    .reveal.show{ opacity:1; transform: translateY(0) }
+
+    /* Footer */
+    footer{ padding:26px 0 54px; border-top:1px solid var(--line); color:var(--muted) }
+
+    /* Utilities */
+    .center{ text-align:center }
+    .right{ text-align:right }
+    .row{ display:flex; gap:12px; flex-wrap:wrap }
+
+    @media (max-width: 920px){
+      .hero .cols, .cols-2, .cols-3, .cols-4{ grid-template-columns: 1fr }
+    }
+  </style>
+</head>
+<body>
+  <!-- ======== NAV ======== -->
+  <nav class="nav">
+    <div class="container inner">
+      <div class="brand"><span class="dot"></span> Mandy</div>
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#certs">Certifications</a>
+        <a href="#contact">Contact</a>
+        <button id="theme" class="btn ghost" aria-label="Toggle theme">🌗</button>
       </div>
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-        <p class="text-xs uppercase tracking-[0.25em] opacity-60">Portfolio • Resume • Writing</p>
-        <h1 class="mt-4 text-5xl md:text-7xl font-extrabold leading-tight grad-text">SAI MANISH</h1>
-        <p class="mt-3 text-base md:text-lg text-gray-600 dark:text-gray-300">Cybersecurity Analyst • Information Security Specialist • Threat Hunter</p>
-        <p class="mt-3 text-sm md:text-base text-gray-600 dark:text-gray-300">
-          Bangalore, India <span class="opacity-60">•</span> Open to Relocation: Germany / Canada / USA
+    </div>
+  </nav>
+
+  <!-- ======== HERO ======== -->
+  <header class="hero container">
+    <div class="grid cols-2">
+      <div>
+        <h1 class="headline reveal">Sai Manish (Mandy)</h1>
+        <div class="sub reveal" style="margin-top:10px">Cybersecurity Analyst • Information Security Lead • Threat Hunter</div>
+        <p class="muted reveal" style="margin-top:14px; max-width:60ch">
+          I design detections, automate incident response, and lead SOC operations. Comfortable across Microsoft Sentinel, Defender, ELK, and KQL—backed by hands-on threat hunting and response.
         </p>
-        <div class="mt-6 flex flex-wrap gap-3 justify-center">
-          <a class="badge px-3 py-1 rounded-full text-sm hover:bg-gray-50/70 dark:hover:bg-white/5" href="mailto:saimanish041998@gmail.com">saimanish041998@gmail.com</a>
-          <a class="badge px-3 py-1 rounded-full text-sm hover:bg-gray-50/70 dark:hover:bg-white/5" href="https://www.linkedin.com/in/sai-m-721384221" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="badge px-3 py-1 rounded-full text-sm hover:bg-gray-50/70 dark:hover:bg-white/5" href="https://github.com/Manish041998" target="_blank" rel="noopener">GitHub</a>
-          <a class="badge px-3 py-1 rounded-full text-sm hover:bg-gray-50/70 dark:hover:bg-white/5" href="https://medium.com/@saimanish041998" target="_blank" rel="noopener">Medium</a>
-        </div>
-        <div class="mt-8 flex gap-4 justify-center">
-          <a href="#experience" class="px-5 py-3 rounded-full bg-gray-900 text-white dark:bg-white dark:text-black font-medium hover:opacity-90">View Experience</a>
-          <a href="#contact" class="px-5 py-3 rounded-full border border-gray-300 dark:border-white/20 font-medium hover:bg-gray-50/80 dark:hover:bg-white/5">Contact</a>
+        <div class="cta reveal">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn" href="mailto:saimanish041998@gmail.com">Email Me</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/sai-m-721384221/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn ghost" href="https://github.com/Manish041998" target="_blank" rel="noopener">GitHub</a>
         </div>
       </div>
-    </section>
+      <div class="hero-visual reveal" aria-hidden="true">
+        <div class="orb"></div>
+      </div>
+    </div>
+  </header>
 
-    <!-- Summary -->
-    <section id="summary" class="py-16">
-      <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        <div class="reveal">
-          <h2 class="text-3xl md:text-4xl font-bold">Professional Summary</h2>
-          <p class="mt-4 text-gray-700 dark:text-gray-300 leading-relaxed">
-            Cybersecurity professional with <strong>4+ years</strong> of progressive experience specializing in Information Security, Threat Detection &amp; Response, Vulnerability Assessments, and External Penetration Testing. Adept in tools like Microsoft Sentinel, Microsoft Defender, CrowdStrike, ELK, Qualys, and Nessus, and skilled in <strong>Python, Bash, PowerShell, and KQL</strong>. Proven track record of reducing incident response time by <strong>30%</strong>, enhancing threat detection accuracy, and successfully managing security awareness training and simulated phishing campaigns.
-          </p>
+  <!-- ======== ABOUT ======== -->
+  <section id="about">
+    <div class="container grid cols-2">
+      <div class="reveal">
+        <h2>About</h2>
+        <p class="muted">Based in India (open to relocation: Canada/USA). 4+ years in cybersecurity; currently Information Security Lead at Resillion. I’ve reduced incident response time by ~30%, fine‑tuned detections, and built runbooks so teams move faster with fewer false positives.</p>
+      </div>
+      <div class="card reveal" style="padding:18px">
+        <div class="row">
+          <span class="chip">Microsoft Sentinel</span>
+          <span class="chip">Microsoft Defender</span>
+          <span class="chip">ELK Stack</span>
+          <span class="chip">CrowdStrike</span>
+          <span class="chip">Wireshark</span>
+          <span class="chip">Zeek</span>
+          <span class="chip">Grafana</span>
+          <span class="chip">KQL</span>
+          <span class="chip">Python</span>
+          <span class="chip">PowerShell</span>
+          <span class="chip">Bash</span>
+          <span class="chip">Logic Apps</span>
+          <span class="chip">n8n</span>
+          <span class="chip">Docker</span>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Key Competencies -->
-    <section id="skills" class="py-16 bg-gray-50 dark:bg-zinc-950">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="reveal text-center">
-          <h2 class="text-3xl md:text-4xl font-bold">Key Competencies</h2>
+  <!-- ======== SKILLS ======== -->
+  <section id="skills">
+    <div class="container">
+      <h2 class="reveal">Skills & Focus Areas</h2>
+      <div class="grid cols-3">
+        <div class="card reveal" style="padding:16px">
+          <h3>Threat Detection</h3>
+          <p class="muted">Analytics rules, hunting queries, anomaly detection (Impossible Travel, AiTM phishing), fine‑tuning to reduce false positives.</p>
         </div>
-        <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div class="reveal card border border-gray-200 dark:border-white/10 p-6">Information Security Operations</div>
-          <div class="reveal card border border-gray-200 dark:border-white/10 p-6">Threat Detection Engineering &amp; Hunting</div>
-          <div class="reveal card border border-gray-200 dark:border-white/10 p-6">Incident Response (Priority‑1)</div>
-          <div class="reveal card border border-gray-200 dark:border-white/10 p-6">Vulnerability Assessments &amp; Pen Testing</div>
-          <div class="reveal card border border-gray-200 dark:border-white/10 p-6">Security Automation (Logic Apps)</div>
-          <div class="reveal card border border-gray-200 dark:border-white/10 p-6">Malware Analysis (Static &amp; Dynamic)</div>
-          <div class="reveal card border border-gray-200 dark:border-white/10 p-6">Security Awareness &amp; Phishing Campaigns</div>
-          <div class="reveal card border border-gray-200 dark:border-white/10 p-6">Security Leadership &amp; Team Management</div>
+        <div class="card reveal" style="padding:16px">
+          <h3>Incident Response</h3>
+          <p class="muted">End‑to‑end triage, P1 handling, executive comms, and playbooks for rapid containment & remediation.</p>
         </div>
-
-        <div class="reveal mt-12">
-          <h3 class="text-2xl font-semibold">Technical Skills</h3>
-          <div class="mt-4 overflow-x-auto">
-            <table class="min-w-full text-sm">
-              <tbody class="align-top">
-                <tr class="border-t border-gray-200 dark:border-white/10">
-                  <td class="py-3 pr-6 font-medium">SIEM &amp; Log Management</td>
-                  <td class="py-3">Microsoft Sentinel, ELK Stack</td>
-                </tr>
-                <tr class="border-t border-gray-200 dark:border-white/10">
-                  <td class="py-3 pr-6 font-medium">XDR/EDR Solutions</td>
-                  <td class="py-3">Microsoft Defender, CrowdStrike Falcon</td>
-                </tr>
-                <tr class="border-t border-gray-200 dark:border-white/10">
-                  <td class="py-3 pr-6 font-medium">Network Monitoring</td>
-                  <td class="py-3">Zeek, Wireshark</td>
-                </tr>
-                <tr class="border-t border-gray-200 dark:border-white/10">
-                  <td class="py-3 pr-6 font-medium">Malware Analysis</td>
-                  <td class="py-3">Ghidra, strings (Static); ProcMon, ANY.RUN (Dynamic)</td>
-                </tr>
-                <tr class="border-t border-gray-200 dark:border-white/10">
-                  <td class="py-3 pr-6 font-medium">Vulnerability Mgmt</td>
-                  <td class="py-3">Qualys, Nessus, Nmap</td>
-                </tr>
-                <tr class="border-t border-gray-200 dark:border-white/10">
-                  <td class="py-3 pr-6 font-medium">Threat Intelligence</td>
-                  <td class="py-3">FLARE, MITRE ATT&amp;CK</td>
-                </tr>
-                <tr class="border-t border-gray-200 dark:border-white/10">
-                  <td class="py-3 pr-6 font-medium">Cloud / Virtualization</td>
-                  <td class="py-3">Azure, Docker, VMware</td>
-                </tr>
-                <tr class="border-t border-gray-200 dark:border-white/10">
-                  <td class="py-3 pr-6 font-medium">Scripting &amp; Query</td>
-                  <td class="py-3">PowerShell, Bash, KQL, Python</td>
-                </tr>
-                <tr class="border-t border-gray-200 dark:border-white/10">
-                  <td class="py-3 pr-6 font-medium">Operating Systems</td>
-                  <td class="py-3">Windows, Linux, macOS</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+        <div class="card reveal" style="padding:16px">
+          <h3>Automation</h3>
+          <p class="muted">Logic Apps & n8n workflows, enrichment, ticketing, and reporting pipelines with Python/KQL.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Experience -->
-    <section id="experience" class="py-16">
-      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div class="reveal text-center">
-          <h2 class="text-3xl md:text-4xl font-bold">Professional Experience</h2>
-        </div>
-
-        <!-- Resillion -->
-        <div class="reveal mt-10 card border border-gray-200 dark:border-white/10 p-6">
-          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
-            <h3 class="text-xl font-semibold">Information Security Analyst — Resillion</h3>
-            <div class="text-sm opacity-70">Jun 2024 – Present · Remote</div>
+  <!-- ======== PROJECTS ======== -->
+  <section id="projects">
+    <div class="container">
+      <h2 class="reveal">Highlighted Projects</h2>
+      <div class="grid cols-3">
+        <article class="proj card reveal">
+          <div class="img" role="img" aria-label="Azure Front Door AiTM detection"></div>
+          <div class="body">
+            <h3>Azure Front Door AiTM Phishing Detection</h3>
+            <p>Analytical rule + hunting pack to detect AFD‑proxied credential harvesting; includes URL patterns, referrer analysis, and response artifacts.</p>
+            <div class="row">
+              <a class="btn" href="#" target="_blank" rel="noopener">GitHub</a>
+              <a class="btn ghost" href="#" target="_blank" rel="noopener">Write‑up</a>
+            </div>
           </div>
-          <ul class="mt-3 list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
-            <li>Managed threat detection and monitoring across client environments, proactively identifying and mitigating potential security incidents.</li>
-            <li>Conducted detailed triage and analysis of <strong>Priority‑1 incidents</strong>, significantly reducing response times.</li>
-            <li>Led monthly <strong>Managed Detection and Response (MDR)</strong> calls, clearly communicating incident insights and security posture.</li>
-            <li>Prepared comprehensive monthly MDR reports to enhance clients' visibility into their security landscape.</li>
-            <li>Conducted external infrastructure <strong>vulnerability assessments and penetration tests</strong>, delivering clear remediation recommendations.</li>
-            <li>Managed <strong>Security Awareness Training &amp; Simulated Phishing Campaigns</strong>, improving clients’ security awareness and readiness.</li>
-            <li>Coordinated team schedules, conducted analyst training, and oversaw incident‑management quality assurance.</li>
+        </article>
+        <article class="proj card reveal">
+          <div class="img" role="img" aria-label="KQL rule pack"></div>
+          <div class="body">
+            <h3>KQL Rule Pack for Sentinel</h3>
+            <p>Curated detections for sign‑ins, PIM activations, and endpoint anomalies; emphasizes noise reduction and quality alerts.</p>
+            <div class="row">
+              <a class="btn" href="#" target="_blank" rel="noopener">GitHub</a>
+              <a class="btn ghost" href="#" target="_blank" rel="noopener">Docs</a>
+            </div>
+          </div>
+        </article>
+        <article class="proj card reveal">
+          <div class="img" role="img" aria-label="n8n automation"></div>
+          <div class="body">
+            <h3>n8n Threat Intel Digest</h3>
+            <p>Automated RSS + enrichment to summarize daily vulns/campaigns; posts to email/Slack with confidence scoring.</p>
+            <div class="row">
+              <a class="btn" href="#" target="_blank" rel="noopener">GitHub</a>
+              <a class="btn ghost" href="#" target="_blank" rel="noopener">Demo</a>
+            </div>
+          </div>
+        </article>
+      </div>
+      <p class="muted" style="margin-top:10px">Tip: replace <em>GitHub/Demo</em> links with your real repos, posts, or demos.</p>
+    </div>
+  </section>
+
+  <!-- ======== EXPERIENCE ======== -->
+  <section id="experience">
+    <div class="container">
+      <h2 class="reveal">Experience</h2>
+      <div class="timeline">
+        <div class="tl card reveal">
+          <strong>Information Security Lead — Resillion</strong>
+          <div class="muted">Jun 2024 – Present · India</div>
+          <ul>
+            <li>Lead incident response for P1 events; improved MTTR by ~30%.</li>
+            <li>Built runbooks/playbooks for analysts; standardized comms to stakeholders.</li>
+            <li>Created & tuned Sentinel analytics; joined PIM and SigninLogs via IP for geo validation.</li>
           </ul>
         </div>
-
-        <!-- Atech Senior -->
-        <div class="reveal mt-6 card border border-gray-200 dark:border-white/10 p-6">
-          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
-            <h3 class="text-xl font-semibold">Senior Security Analyst — Atech Cloud</h3>
-            <div class="text-sm opacity-70">Dec 2022 – Mar 2024 · Remote</div>
-          </div>
-          <ul class="mt-3 list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
-            <li>Promoted rapidly from Jr. Security Analyst due to outstanding performance in incident handling and team leadership.</li>
-            <li>Handled daily security incidents using Microsoft Sentinel and Defender; built complex detection rules using KQL, significantly reducing incident detection and response times.</li>
-            <li>Developed and maintained detailed <strong>Incident Response Playbooks</strong> enhancing overall incident management capabilities.</li>
-            <li>Led proactive threat‑hunting initiatives, utilizing advanced forensic tools (ProcMon, Regshot, ELK Stack) to mitigate threats swiftly.</li>
-            <li>Managed and executed <strong>Security Awareness &amp; Phishing Simulation Campaigns</strong>, significantly reducing susceptibility to email‑based threats.</li>
-            <li>Conducted regular training sessions on KQL scripting, threat‑hunting techniques, and incident response.</li>
-          </ul>
-        </div>
-
-        <!-- Atech Junior -->
-        <div class="reveal mt-6 card border border-gray-200 dark:border-white/10 p-6">
-          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
-            <h3 class="text-xl font-semibold">Junior Security Analyst — Atech Cloud</h3>
-            <div class="text-sm opacity-70">Nov 2021 – Dec 2022 · Remote</div>
-          </div>
-          <ul class="mt-3 list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
-            <li>Performed initial incident triage and analysis with Microsoft Sentinel, focusing on email, cloud, and endpoint security.</li>
-            <li>Managed Azure security configurations, ensuring secure remote operations.</li>
-            <li>Effectively mitigated phishing attempts, spam, and email threats using Microsoft Defender for Office 365.</li>
-            <li>Collaborated cross‑functionally to strengthen security strategy and address identified risks proactively.</li>
-            <li>Supported the development of foundational security practices through proactive alert reviews and early threat detection.</li>
-          </ul>
-        </div>
-
-        <!-- CTF -->
-        <div class="reveal mt-6 card border border-gray-200 dark:border-white/10 p-6">
-          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
-            <h3 class="text-xl font-semibold">CTF Player &amp; Malware Analyst — TryHackMe (Part‑Time)</h3>
-            <div class="text-sm opacity-70">Mar 2024 – May 2024</div>
-          </div>
-          <ul class="mt-3 list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
-            <li>Conducted deep malware analysis and digital forensics, analyzing complex attack patterns using tools such as Wireshark and Autopsy.</li>
-            <li>Enhanced proactive threat hunting and threat intelligence capabilities, rapidly identifying and responding to emerging threats.</li>
-            <li>Performed static and dynamic analysis on various file types, including PE, PDFs, scripts (VBS, JS, HTA), and Office files, uncovering hidden malicious activities.</li>
+        <div class="tl card reveal">
+          <strong>Senior Security Analyst — ATech</strong>
+          <div class="muted">Nov 2022 – Mar 2024 · India</div>
+          <ul>
+            <li>Triage & investigation across EDR, identity, and perimeter telemetry.</li>
+            <li>Monthly MDR reports and client briefings; drove posture improvements.</li>
+            <li>Mentored juniors; authored investigation runbooks.</li>
           </ul>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Education & Certifications -->
-    <section id="education" class="py-16 bg-gray-50 dark:bg-zinc-950">
-      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-2 gap-10">
-          <div class="reveal">
-            <h2 class="text-3xl md:text-4xl font-bold">Education</h2>
-            <div class="mt-6 card border border-gray-200 dark:border-white/10 p-6">
-              <div class="font-semibold">Bachelor of Engineering (ECE)</div>
-              <div class="opacity-80 text-sm mt-1">Nova University, 2020 — CGPA: 8.0/10</div>
-            </div>
-          </div>
-
-          <div class="reveal" id="certs">
-            <h2 class="text-3xl md:text-4xl font-bold">Certifications</h2>
-            <ul class="mt-6 space-y-3">
-              <li class="card border border-gray-200 dark:border-white/10 p-4"><strong>SC‑100</strong> — Microsoft Cybersecurity Architect (2025)</li>
-              <li class="card border border-gray-200 dark:border-white/10 p-4"><strong>SC‑200</strong> — Microsoft Security Operations Analyst (2023)</li>
-              <li class="card border border-gray-200 dark:border-white/10 p-4"><strong>AZ‑500</strong> — Microsoft Azure Security Engineer Associate (2023)</li>
-            </ul>
-          </div>
+  <!-- ======== CERTS ======== -->
+  <section id="certs">
+    <div class="container">
+      <h2 class="reveal">Certifications</h2>
+      <div class="grid cols-3">
+        <div class="card reveal" style="padding:16px">
+          <strong>Microsoft SC‑200</strong>
+          <div class="muted">Security Operations Analyst</div>
+        </div>
+        <div class="card reveal" style="padding:16px">
+          <strong>Microsoft AZ‑500</strong>
+          <div class="muted">Azure Security Engineer Associate</div>
+        </div>
+        <div class="card reveal" style="padding:16px">
+          <strong>Microsoft SC‑100</strong>
+          <div class="muted">Cybersecurity Architect Expert</div>
         </div>
       </div>
-    </section>
+      <p class="muted" style="margin-top:10px">Currently preparing for CISSP.</p>
+    </div>
+  </section>
 
-    <!-- Languages & Highlights -->
-    <section id="languages" class="py-16">
-      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-2 gap-10">
-          <div class="reveal">
-            <h2 class="text-3xl md:text-4xl font-bold">Languages</h2>
-            <div class="mt-6 grid gap-3">
-              <div class="card border border-gray-200 dark:border-white/10 p-4"><strong>English:</strong> Fluent</div>
-              <div class="card border border-gray-200 dark:border-white/10 p-4"><strong>Telugu:</strong> Native</div>
-            </div>
-          </div>
-          <div class="reveal">
-            <h2 class="text-3xl md:text-4xl font-bold">Additional Highlights</h2>
-            <ul class="mt-6 list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
-              <li>Regular technical writer on Medium, publishing insights on threat detection, malware analysis, and cybersecurity practices.</li>
-              <li>Skilled in mapping security threats to <strong>MITRE ATT&amp;CK</strong> to strengthen detection frameworks.</li>
-            </ul>
-            <div class="mt-6 p-5 card border border-gray-200 dark:border-white/10">
-              <div class="text-sm opacity-60 uppercase tracking-widest">Professional Motto</div>
-              <div class="mt-2 text-lg">“Continuously refining detection to ensure organizational resilience and security.”</div>
-            </div>
-          </div>
-        </div>
+  <!-- ======== CONTACT ======== -->
+  <section id="contact">
+    <div class="container grid cols-2">
+      <div class="reveal">
+        <h2>Contact</h2>
+        <p class="muted">Open to roles in India, Canada, or the USA. For opportunities, collaborations, or speaking, reach out:</p>
+        <p><strong>Email:</strong> <a href="mailto:saimanish041998@gmail.com">saimanish041998@gmail.com</a></p>
+        <p><strong>Website:</strong> <a href="https://getsmandy.in" target="_blank" rel="noopener">getsmandy.in</a></p>
       </div>
-    </section>
-
-    <!-- Projects (placeholders) -->
-    <section id="projects" class="py-24">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="reveal text-center">
-          <h2 class="text-3xl md:text-4xl font-bold">Projects</h2>
-          <p class="mt-3 text-gray-600 dark:text-gray-300">A few things I shipped.</p>
+      <form class="card reveal" style="padding:18px" onsubmit="sendMail(event)">
+        <label>Name<br/>
+          <input required name="name" class="input" /></label>
+        <label>Email<br/>
+          <input required type="email" name="email" class="input" /></label>
+        <label>Message<br/>
+          <textarea required name="message" class="input" rows="5"></textarea></label>
+        <div class="right" style="margin-top:8px">
+          <button class="btn primary" type="submit">Send</button>
         </div>
-        <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <a class="reveal block group border border-gray-200 dark:border-white/10 rounded-3xl p-5 hover:shadow-xl transition-shadow" href="#" target="_blank" rel="noopener">
-            <div class="aspect-video rounded-2xl bg-gradient-to-br from-gray-100 to-gray-50 dark:from-zinc-900 dark:to-black"></div>
-            <div class="mt-4">
-              <div class="flex items-center justify-between">
-                <h3 class="font-semibold text-lg">Azure AFD Phishing Detector</h3>
-                <span class="text-xs opacity-60 group-hover:opacity-100">KQL</span>
-              </div>
-              <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Analytical rule to catch AiTM attempts via Azure Front Door.</p>
-            </div>
-          </a>
-          <a class="reveal block group border border-gray-200 dark:border-white/10 rounded-3xl p-5 hover:shadow-xl transition-shadow" href="#" target="_blank" rel="noopener">
-            <div class="aspect-video rounded-2xl bg-gradient-to-br from-gray-100 to-gray-50 dark:from-zinc-900 dark:to-black"></div>
-            <div class="mt-4">
-              <div class="flex items-center justify-between">
-                <h3 class="font-semibold text-lg">Threat Intel Digest (n8n)</h3>
-                <span class="text-xs opacity-60 group-hover:opacity-100">Automation</span>
-              </div>
-              <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">RSS aggregation + daily summary emails.</p>
-            </div>
-          </a>
-          <a class="reveal block group border border-gray-200 dark:border-white/10 rounded-3xl p-5 hover:shadow-xl transition-shadow" href="#" target="_blank" rel="noopener">
-            <div class="aspect-video rounded-2xl bg-gradient-to-br from-gray-100 to-gray-50 dark:from-zinc-900 dark:to-black"></div>
-            <div class="mt-4">
-              <div class="flex items-center justify-between">
-                <h3 class="font-semibold text-lg">SOC Runbooks</h3>
-                <span class="text-xs opacity-60 group-hover:opacity-100">Docs</span>
-              </div>
-              <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Triage → scope → contain → comms → closure.</p>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
+        <small class="muted">No backend attached — this uses <em>mailto:</em> for quick tests. Replace with Formspree/Logic Apps for production.</small>
+      </form>
+    </div>
+  </section>
 
-    <!-- Blog -->
-    <section id="blog" class="py-24 bg-gray-50 dark:bg-zinc-950">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="reveal text-center">
-          <h2 class="text-3xl md:text-4xl font-bold">Blog</h2>
-          <p class="mt-3 text-gray-600 dark:text-gray-300">Publishing on Medium now — migrating posts here later.</p>
-        </div>
-        <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <a class="reveal block group border border-gray-200 dark:border-white/10 rounded-3xl p-5 hover:shadow-lg transition-shadow" href="https://medium.com/@saimanish041998" target="_blank" rel="noopener">
-            <div class="aspect-[3/2] rounded-2xl bg-gradient-to-br from-gray-100 to-gray-50 dark:from-zinc-900 dark:to-black"></div>
-            <div class="mt-4">
-              <h3 class="font-semibold">Read on Medium →</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">Detections, malware analysis, IR notes.</p>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
+  <footer>
+    <div class="container">
+      © <span id="y"></span> Mandy • Built with clean HTML/CSS/JS • <a href="#top">Back to top</a>
+    </div>
+  </footer>
 
-    <!-- Contact -->
-    <section id="contact" class="py-24">
-      <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8 text-center">
-        <div class="reveal">
-          <h2 class="text-3xl md:text-4xl font-bold">Let’s work</h2>
-          <p class="mt-3 text-gray-600 dark:text-gray-300">
-            Email: <a class="underline hover:opacity-80" href="mailto:saimanish041998@gmail.com">saimanish041998@gmail.com</a>
-          </p>
-          <div class="mt-6 flex items-center justify-center gap-4">
-            <a class="px-4 py-2 rounded-full border border-gray-300 dark:border-white/20 hover:bg-gray-50/80 dark:hover:bg-white/5" href="https://www.linkedin.com/in/sai-m-721384221" target="_blank" rel="noopener">LinkedIn</a>
-            <a class="px-4 py-2 rounded-full border border-gray-300 dark:border-white/20 hover:bg-gray-50/80 dark:hover:bg-white/5" href="https://github.com/Manish041998" target="_blank" rel="noopener">GitHub</a>
-            <a class="px-4 py-2 rounded-full border border-gray-300 dark:border-white/20 hover:bg-gray-50/80 dark:hover:bg-white/5" href="https://medium.com/@saimanish041998" target="_blank" rel="noopener">Medium</a>
-          </div>
+  <style>
+    /* form inputs */
+    .input{ width:100%; margin:.35rem 0 0.8rem; padding:.8rem 1rem; border-radius:12px; border:1px solid var(--line); background:var(--bg); color:var(--text) }
+    .input:focus{ outline: 2px solid color-mix(in srgb, var(--brand) 30%, transparent) }
+    form label{ display:block; font-weight:600 }
+  </style>
 
-          <!-- Optional: Resume download (place your PDF at /assets/SaiManish_CyberSecurity_Resume.pdf) -->
-          <div class="mt-6">
-            <a class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-gray-900 text-white dark:bg-white dark:text-black font-medium hover:opacity-90" href="/assets/SaiManish_CyberSecurity_Resume.pdf" target="_blank" rel="noopener">
-              Download Resume (PDF)
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+  <script>
+    // Theme toggle with localStorage
+    const btn = document.getElementById('theme');
+    const root = document.documentElement;
+    const saved = localStorage.getItem('theme');
+    if(saved){ root.setAttribute('data-theme', saved); }
+    btn.addEventListener('click', () => {
+      const t = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', t); localStorage.setItem('theme', t);
+    });
 
-    <footer class="py-10 border-t border-gray-200 dark:border-white/10">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-sm flex flex-col md:flex-row items-center justify-between gap-3">
-        <div class="opacity-60">© <span id="year"></span> Sai Manish</div>
-        <div class="opacity-60">Built on GitHub Pages</div>
-      </div>
-    </footer>
+    // Reveal on scroll
+    const io = new IntersectionObserver((entries)=>{
+      for(const e of entries){ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target); } }
+    }, { threshold: .12 });
+    document.querySelectorAll('.reveal').forEach(el=> io.observe(el));
 
-    <script>
-      // Year
-      document.getElementById('year').textContent = new Date().getFullYear();
+    // Footer year
+    document.getElementById('y').textContent = new Date().getFullYear();
 
-      // Reveal on scroll
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
-      }, { threshold: 0.18 });
-      document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-    </script>
-  </body>
+    // Mailto fallback
+    function sendMail(ev){
+      ev.preventDefault();
+      const fd = new FormData(ev.target);
+      const subject = encodeURIComponent('Portfolio Contact from ' + fd.get('name'));
+      const body = encodeURIComponent(fd.get('message') + '\n\n— ' + fd.get('name') + ' (' + fd.get('email') + ')');
+      window.location.href = `mailto:saimanish041998@gmail.com?subject=${subject}&body=${body}`;
+    }
+  </script>
+</body>
 </html>
