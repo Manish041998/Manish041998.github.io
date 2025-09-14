@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mandy — Alien Security</title>
-  <meta name="description" content="Sai Manish (Mandy) — Cybersecurity in Alien Horror theme. Dark, glitchy, cyberpunk vibes.">
+  <meta name="description" content="Sai Manish (Mandy) — Cybersecurity portfolio in Alien Horror theme. Detection engineering, threat hunting, automation, MITRE ATT&CK.">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <style>
     /* ===== Alien Horror Theme ===== */
@@ -25,7 +25,7 @@
     .nav__links a{margin:0 10px;font-size:14px}
 
     /* HERO */
-    .hero{min-height:85vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative}
+    .hero{min-height:85vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;padding:0 20px}
     .hero h1{font-family:'Orbitron',sans-serif;font-size:clamp(40px,6vw,72px);color:#ff0033;animation:glitch 1.2s infinite alternate}
     .hero h2{color:#00ff99;margin:10px 0}
     .hero p{max-width:700px;margin:0 auto;color:#bbb}
@@ -49,6 +49,7 @@
     .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
     .card{background:#0a0a0a;border:1px solid #ff0033;border-radius:10px;padding:20px;transition:.2s}
     .card:hover{transform:scale(1.05) rotate(-1deg);box-shadow:0 0 25px #ff0033}
+    .card h4{color:#00ff99}
 
     /* Cursor alien glow */
     .cursor-glow{position:absolute;width:20px;height:20px;background:#00ff99;border-radius:50%;pointer-events:none;transform:translate(-50%,-50%);box-shadow:0 0 25px #00ff99;animation:fade .6s forwards}
@@ -67,6 +68,8 @@
       <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#interests">Interests</a>
       <a href="#contact">Contact</a>
     </div>
   </nav>
@@ -74,39 +77,82 @@
   <!-- HERO -->
   <section class="hero">
     <h1>ALIEN DEFENSE</h1>
-    <h2>Watching in the Dark</h2>
-    <p>I hunt threats like they’re signals from another world. Detection, defense, automation — in the style of alien warfare.</p>
+    <h2>Cyber Defense, Done Precisely.</h2>
+    <p>I am <strong>Sai Manish (Mandy)</strong>, Information Security Lead with 4+ years across detection engineering, threat hunting, and incident response. I build high-signal Microsoft Sentinel detections (KQL), lead P1 investigations, and automate response with Logic Apps & n8n. Open to relocation (US / Germany / Canada / India).</p>
   </section>
 
   <!-- Experience -->
   <section id="experience" class="tile">
     <h3>Experience</h3>
     <ul>
-      <li><b>Resillion</b> — Security Lead (2024 – Now) : Built high-signal detections, automated containment, reduced noise.</li>
-      <li><b>Atech</b> — Analyst (2022 – 2024) : Hands-on triage, investigations, and rule tuning.</li>
+      <li><b>Resillion</b> — Information Security Lead (Jun 2024 – Present)
+        <ul>
+          <li>Led P1 incidents (phishing, token theft, lateral movement); coordinated stakeholder comms & containment.</li>
+          <li>Fine-tuned Sentinel/Defender analytics → <b>~35% false-positive reduction</b>.</li>
+          <li>Built & shared KQL hunting packs mapped to MITRE; authored SOC SOPs/runbooks.</li>
+          <li>External vulnerability assessments (Nessus/Qualys) with CVSS remediation guidance.</li>
+        </ul>
+      </li>
+      <li><b>Atech</b> — Senior Security Analyst (Nov 2023 – Mar 2024)
+        <ul><li>Owned high-priority investigations; authored 10+ playbooks; mentored Tier 1 analysts.</li></ul>
+      </li>
+      <li><b>Atech</b> — SOC Analyst (Nov 2022 – Nov 2023)
+        <ul><li>Alert triage (Sentinel, Defender, ELK); monthly metrics; assisted rule tuning & correlations.</li></ul>
+      </li>
     </ul>
   </section>
 
   <!-- Skills -->
   <section id="skills" class="tile">
-    <h3>Skills</h3>
-    <p>SIEM, Threat Hunting, MITRE ATT&CK, n8n, Logic Apps, Malware Analysis, Adversary Simulation.</p>
+    <h3>Skills & Tools</h3>
+    <div>
+      <p><b>SIEM & XDR</b>: Microsoft Sentinel, M365 Defender, Defender for Endpoint, ELK, CrowdStrike Falcon</p>
+      <p><b>Threat Detection</b>: KQL, MITRE ATT&CK, Sigma/YARA (reading), Alert tuning, UEBA</p>
+      <p><b>Automation</b>: n8n, Azure Logic Apps, Power Automate</p>
+      <p><b>Security Tools</b>: Nessus, Qualys, Wireshark, Zeek, Process Monitor, Grafana, Any.run, Flare VM</p>
+      <p><b>Cloud & Platform</b>: Azure, Docker, Windows/Linux, VirtualBox, GitHub</p>
+      <p><b>Languages</b>: KQL, Python, Bash, PowerShell</p>
+    </div>
   </section>
 
   <!-- Projects -->
   <section id="projects" class="tile">
     <h3>Projects</h3>
     <div class="cards">
-      <div class="card"><h4>KQL Alien Pack</h4><p>Detection queries that map cosmic threats to MITRE tactics.</p></div>
-      <div class="card"><h4>n8n Phishing Traps</h4><p>Automated alien-style honeypot feeds integrated with Slack.</p></div>
-      <div class="card"><h4>Glitch Detector</h4><p>Experimental anomaly detection that feels like alien signals.</p></div>
+      <div class="card"><h4>MITRE KQL Toolkit</h4><p>Reusable KQL templates mapping public reports to ATT&CK; accelerated hunting for the team.</p></div>
+      <div class="card"><h4>n8n TI Summarizer</h4><p>Automated RSS → GPT summaries → Slack/email to keep SOC briefed daily.</p></div>
+      <div class="card"><h4>AiTM Phishing Analytics</h4><p>Correlated Sign-in + OfficeActivity logs to surface AiTM campaigns in Sentinel.</p></div>
+      <div class="card"><h4>External VA Pipeline</h4><p>Nessus/Qualys export → GitHub Issues workflow to track remediation SLAs.</p></div>
     </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="tile">
+    <h3>Education & Certifications</h3>
+    <ul>
+      <li><b>B.Tech, Electronics & Communication</b> — Nova University (2020), CGPA 8.0</li>
+      <li><b>Certifications</b>: SC-200, AZ-500, SC-100; CISSP (planned)</li>
+      <li><b>Speaking / Writing</b>: Shares KQL tips; writes on Medium; open to talks & webinars.</li>
+    </ul>
+  </section>
+
+  <!-- Interests -->
+  <section id="interests" class="tile">
+    <h3>Interests & Exploration</h3>
+    <ul>
+      <li>CTFs on Hack The Box & TryHackMe; malware behavior analysis.</li>
+      <li>Adversary emulation & purple teaming (MITRE-mapped).</li>
+      <li><b>Open to relocate</b>: US, Germany, Canada. Languages: English (professional), Telugu (native).</li>
+    </ul>
   </section>
 
   <!-- Contact -->
   <footer id="contact">
     <div>Contact: <a href="mailto:saimanish041998@gmail.com">saimanish041998@gmail.com</a></div>
-    <div>© 2025 Mandy — Alien Security</div>
+    <div><a href="https://www.linkedin.com/in/sai-m-721384221" target="_blank">LinkedIn</a> · 
+         <a href="https://github.com/Manish041998" target="_blank">GitHub</a> · 
+         <a href="https://medium.com/@saimanish041998" target="_blank">Medium</a></div>
+    <div>© 2025 Sai Manish — Alien Security</div>
   </footer>
 
   <script>
