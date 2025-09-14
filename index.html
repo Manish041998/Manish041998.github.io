@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mandy — Alien Security</title>
+  <meta name="description" content="Sai Manish (Mandy) — Cybersecurity in Alien Horror theme. Dark, glitchy, cyberpunk vibes.">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+    /* ===== Alien Horror Theme ===== */
+    *,*::before,*::after{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:'Share Tech Mono',monospace;
+      background:#050505 url('https://images.unsplash.com/photo-1614315434817-6f3c3eeecb48?auto=format&fit=crop&w=2000&q=80') no-repeat center/cover;
+      color:#00ff99;
+      line-height:1.6;
+      overflow-x:hidden;
+    }
+    a{color:#ff0033;text-decoration:none}
+
+    /* NAV */
+    .nav{position:sticky;top:0;z-index:90;background:rgba(0,0,0,0.85);backdrop-filter:blur(10px);padding:12px 20px;border-bottom:1px solid #00ff99;display:flex;align-items:center;justify-content:space-between}
+    .nav__brand{font-weight:700;color:#ff0033;font-size:20px;letter-spacing:2px}
+    .nav__links a{margin:0 10px;font-size:14px}
+
+    /* HERO */
+    .hero{min-height:85vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative}
+    .hero h1{font-family:'Orbitron',sans-serif;font-size:clamp(40px,6vw,72px);color:#ff0033;animation:glitch 1.2s infinite alternate}
+    .hero h2{color:#00ff99;margin:10px 0}
+    .hero p{max-width:700px;margin:0 auto;color:#bbb}
+
+    /* Glitch effect */
+    @keyframes glitch {
+      0% { text-shadow:2px 2px #ff0033, -2px -2px #00ff99; }
+      25% { text-shadow:-3px 2px #9900ff, 2px -2px #ff0033; }
+      50% { text-shadow:2px -2px #00ff99, -2px 3px #ff0033; }
+      75% { text-shadow:-2px -2px #ff0033, 2px 2px #00ff99; }
+      100% { text-shadow:none; }
+    }
+
+    /* Section tiles */
+    section{padding:80px 20px;max-width:1000px;margin:0 auto}
+    .tile{background:rgba(0,0,0,0.7);padding:40px;border-radius:16px;margin-bottom:40px;border:1px solid #00ff99}
+    .tile h3{font-family:'Orbitron',sans-serif;color:#ff0033;margin-bottom:10px}
+    .tile p,.tile li{color:#ddd}
+
+    /* Cards (projects) */
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+    .card{background:#0a0a0a;border:1px solid #ff0033;border-radius:10px;padding:20px;transition:.2s}
+    .card:hover{transform:scale(1.05) rotate(-1deg);box-shadow:0 0 25px #ff0033}
+
+    /* Cursor alien glow */
+    .cursor-glow{position:absolute;width:20px;height:20px;background:#00ff99;border-radius:50%;pointer-events:none;transform:translate(-50%,-50%);box-shadow:0 0 25px #00ff99;animation:fade .6s forwards}
+    @keyframes fade {to{opacity:0;transform:scale(2)}}
+
+    /* Footer */
+    footer{background:#000;color:#666;padding:30px;text-align:center;font-size:14px;border-top:1px solid #00ff99}
+    footer a{color:#ff0033}
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav__brand">MANDY</div>
+    <div class="nav__links">
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>ALIEN DEFENSE</h1>
+    <h2>Watching in the Dark</h2>
+    <p>I hunt threats like they’re signals from another world. Detection, defense, automation — in the style of alien warfare.</p>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="tile">
+    <h3>Experience</h3>
+    <ul>
+      <li><b>Resillion</b> — Security Lead (2024 – Now) : Built high-signal detections, automated containment, reduced noise.</li>
+      <li><b>Atech</b> — Analyst (2022 – 2024) : Hands-on triage, investigations, and rule tuning.</li>
+    </ul>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="tile">
+    <h3>Skills</h3>
+    <p>SIEM, Threat Hunting, MITRE ATT&CK, n8n, Logic Apps, Malware Analysis, Adversary Simulation.</p>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="tile">
+    <h3>Projects</h3>
+    <div class="cards">
+      <div class="card"><h4>KQL Alien Pack</h4><p>Detection queries that map cosmic threats to MITRE tactics.</p></div>
+      <div class="card"><h4>n8n Phishing Traps</h4><p>Automated alien-style honeypot feeds integrated with Slack.</p></div>
+      <div class="card"><h4>Glitch Detector</h4><p>Experimental anomaly detection that feels like alien signals.</p></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <footer id="contact">
+    <div>Contact: <a href="mailto:saimanish041998@gmail.com">saimanish041998@gmail.com</a></div>
+    <div>© 2025 Mandy — Alien Security</div>
+  </footer>
+
+  <script>
+    // Cursor alien glow
+    document.addEventListener("mousemove", function(e){
+      let glow=document.createElement("div");
+      glow.className="cursor-glow";
+      glow.style.left=e.pageX+"px";
+      glow.style.top=e.pageY+"px";
+      document.body.appendChild(glow);
+      setTimeout(()=>glow.remove(),500);
+    });
+  </script>
+</body>
+</html>
