@@ -1,57 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <defs>
-    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#00d9ff;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#00ff41;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d9ff"/>
+      <stop offset="100%" style="stop-color:#00ff41"/>
     </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
   </defs>
   
-  <!-- Dark background -->
-  <rect width="100" height="100" fill="#0a0e27" rx="10"/>
+  <!-- Background -->
+  <rect width="64" height="64" fill="#0a0e27" rx="8"/>
   
   <!-- Terminal window -->
-  <rect x="10" y="15" width="80" height="70" fill="#1a2332" rx="4" stroke="url(#grad)" stroke-width="1.5"/>
+  <rect x="6" y="10" width="52" height="44" fill="#1a2332" rx="3" stroke="#00d9ff" stroke-width="1"/>
   
-  <!-- Terminal header dots -->
-  <circle cx="18" cy="23" r="2.5" fill="#ff5f56"/>
-  <circle cx="26" cy="23" r="2.5" fill="#ffbd2e"/>
-  <circle cx="34" cy="23" r="2.5" fill="#27c93f"/>
+  <!-- Header dots -->
+  <circle cx="12" cy="16" r="1.5" fill="#ff5f56"/>
+  <circle cx="18" cy="16" r="1.5" fill="#ffbd2e"/>
+  <circle cx="24" cy="16" r="1.5" fill="#27c93f"/>
   
-  <!-- Code lines (Matrix style) -->
-  <rect x="15" y="32" width="25" height="2" fill="#00ff41" opacity="0.8" filter="url(#glow)"/>
-  <rect x="42" y="32" width="15" height="2" fill="#00d9ff" opacity="0.7"/>
-  <rect x="60" y="32" width="20" height="2" fill="#8b5cf6" opacity="0.6"/>
+  <!-- Code lines -->
+  <line x1="10" y1="24" x2="28" y2="24" stroke="#00ff41" stroke-width="2"/>
+  <line x1="32" y1="24" x2="48" y2="24" stroke="#00d9ff" stroke-width="2"/>
   
-  <rect x="15" y="40" width="18" height="2" fill="#00d9ff" opacity="0.8" filter="url(#glow)"/>
-  <rect x="35" y="40" width="30" height="2" fill="#00ff41" opacity="0.7"/>
-  <rect x="68" y="40" width="12" height="2" fill="#8b5cf6" opacity="0.6"/>
+  <line x1="10" y1="30" x2="22" y2="30" stroke="#00d9ff" stroke-width="2"/>
+  <line x1="26" y1="30" x2="45" y2="30" stroke="#8b5cf6" stroke-width="2"/>
   
-  <rect x="15" y="48" width="35" height="2" fill="#8b5cf6" opacity="0.8" filter="url(#glow)"/>
-  <rect x="52" y="48" width="10" height="2" fill="#00ff41" opacity="0.7"/>
-  <rect x="64" y="48" width="16" height="2" fill="#00d9ff" opacity="0.6"/>
+  <line x1="10" y1="36" x2="35" y2="36" stroke="#00ff41" stroke-width="2"/>
+  <line x1="39" y1="36" x2="50" y2="36" stroke="#00d9ff" stroke-width="2"/>
   
-  <rect x="15" y="56" width="20" height="2" fill="#00ff41" opacity="0.8"/>
-  <rect x="37" y="56" width="25" height="2" fill="#8b5cf6" opacity="0.7" filter="url(#glow)"/>
-  <rect x="64" y="56" width="16" height="2" fill="#00d9ff" opacity="0.6"/>
+  <line x1="10" y1="42" x2="25" y2="42" stroke="#8b5cf6" stroke-width="2"/>
+  <line x1="29" y1="42" x2="48" y2="42" stroke="#00ff41" stroke-width="2"/>
   
-  <!-- Cursor/Prompt -->
-  <rect x="15" y="66" width="8" height="2" fill="#00ff41" filter="url(#glow)">
+  <!-- Blinking cursor -->
+  <rect x="10" y="47" width="6" height="2" fill="#00ff41">
     <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
   </rect>
-  
-  <!-- Skull icon (optional hacker touch) -->
-  <g transform="translate(70, 70) scale(0.4)" fill="url(#grad)" opacity="0.6">
-    <ellipse cx="25" cy="20" rx="20" ry="25"/>
-    <circle cx="18" cy="18" r="4" fill="#0a0e27"/>
-    <circle cx="32" cy="18" r="4" fill="#0a0e27"/>
-    <path d="M 20 28 L 20 32 L 18 34 L 22 34 L 25 32 L 28 34 L 32 34 L 30 32 L 30 28 Z" fill="#0a0e27"/>
-  </g>
 </svg>
